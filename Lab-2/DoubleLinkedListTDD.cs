@@ -62,6 +62,32 @@ namespace Lab_2
 
         public bool remove(T data)
         {
+            Node<T> current = this.find(data);
+            if (current != null)
+            {
+                // если узел не последний
+                if (current.Next != null)
+                {
+                    current.Next.Previous = current.Previous;
+                }
+                else
+                {
+                    // если последний, переустанавливаем tail
+                    tail = current.Previous;
+                }
+
+                // если узел не первый
+                if (current.Previous != null)
+                {
+                    current.Previous.Next = current.Next;
+                }
+                else
+                {
+                    // если первый, переустанавливаем head
+                    head = current.Next;
+                }
+                return true;
+            }
             return false;
         }
     }
