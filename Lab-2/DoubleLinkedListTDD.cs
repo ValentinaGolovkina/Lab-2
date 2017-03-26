@@ -62,7 +62,7 @@ namespace Lab_2
 
         public bool remove(T data)
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

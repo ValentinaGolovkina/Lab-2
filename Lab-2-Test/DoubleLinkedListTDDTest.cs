@@ -79,5 +79,15 @@ namespace Lab_2_Test
             Assert.AreEqual(null, list.head);
             Assert.AreEqual(null, list.tail);
         }
+        
+        [TestMethod]
+        public void tdd_remove11Test()
+        {
+            list.add(1);
+            Assert.IsTrue(list.remove(1));
+            Assert.AreEqual(0, list.Count());
+            Assert.AreEqual(null, list.head);
+            Assert.AreEqual(null, list.tail);
+        }
     }
 }
