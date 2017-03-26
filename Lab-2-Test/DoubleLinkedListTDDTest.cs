@@ -62,5 +62,13 @@ namespace Lab_2_Test
             Assert.AreEqual(null, list.head.Next.Next);
             Assert.AreEqual(2, list.tail.Data);
         }
+        
+        [TestMethod]
+        public void tdd_findTest()
+        {
+            list.add(1);
+            Node<int> node = list.find(1);
+            Assert.AreEqual(1, node.Data);
+        }
     }
 }

@@ -38,8 +38,19 @@ namespace Lab_2
         {
             Node<T> node = new Node<T>(data);
 
-            head = node;
+            if (head == null)
+                head = node;
+            else
+            {
+                tail.Next = node;
+                node.Previous = tail;
+            }
             tail = node;
+        }
+
+        public Node<T> find(T data)
+        {
+            throw new NotImplementedException();
         }
     }
 }
