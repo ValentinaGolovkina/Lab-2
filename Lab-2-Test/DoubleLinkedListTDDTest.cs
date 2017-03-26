@@ -37,5 +37,16 @@ namespace Lab_2_Test
             list.head.Next = new Node<int>(2);
             Assert.AreEqual(2, list.Count());
         }
+        
+        [TestMethod]
+        public void tdd_add1Test()
+        {
+            list.add(1);
+            Assert.AreEqual(1, list.Count());
+            Assert.AreEqual(1, list.head.Data);
+            Assert.AreEqual(null, list.head.Next);
+            Assert.AreEqual(null, list.head.Previous);
+            Assert.AreEqual(1, list.tail.Data);
+        }
     }
 }

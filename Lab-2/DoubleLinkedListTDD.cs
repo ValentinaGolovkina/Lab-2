@@ -25,8 +25,18 @@ namespace Lab_2
         public int Count()
         {
             int count = 0;
-            if (head != null) count = 1;
+            Node<T> current = head;
+            while (current != null)
+            {
+                count++;
+                current = current.Next;
+            }
             return count;
+        }
+
+        public void add(T data)
+        {
+            throw new NotImplementedException();
         }
     }
 }
