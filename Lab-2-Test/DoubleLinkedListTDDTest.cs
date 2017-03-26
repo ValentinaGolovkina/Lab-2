@@ -70,5 +70,14 @@ namespace Lab_2_Test
             Node<int> node = list.find(1);
             Assert.AreEqual(1, node.Data);
         }
+
+        [TestMethod]
+        public void tdd_remove10Test()
+        {
+            Assert.IsFalse(list.remove(1));
+            Assert.AreEqual(0, list.Count());
+            Assert.AreEqual(null, list.head);
+            Assert.AreEqual(null, list.tail);
+        }
     }
 }

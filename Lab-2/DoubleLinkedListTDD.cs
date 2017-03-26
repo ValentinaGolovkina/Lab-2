@@ -50,6 +50,18 @@ namespace Lab_2
 
         public Node<T> find(T data)
         {
+            Node<T> current = head;
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                    return current;
+                current = current.Next;
+            }
+            return null;
+        }
+
+        public bool remove(T data)
+        {
             throw new NotImplementedException();
         }
     }
