@@ -36,7 +36,10 @@ namespace Lab_2
 
         public void add(T data)
         {
-            throw new NotImplementedException();
+            Node<T> node = new Node<T>(data);
+
+            head = node;
+            tail = node;
         }
     }
 }
