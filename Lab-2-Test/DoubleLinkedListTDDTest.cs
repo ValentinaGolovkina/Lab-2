@@ -29,5 +29,13 @@ namespace Lab_2_Test
             list.head = new Node<int>(1);
             Assert.AreEqual(1, list.Count());
         }
+
+        [TestMethod]
+        public void tdd_getCount2Test()
+        {
+            list.head = new Node<int>(1);
+            list.head.Next = new Node<int>(2);
+            Assert.AreEqual(2, list.Count());
+        }
     }
 }

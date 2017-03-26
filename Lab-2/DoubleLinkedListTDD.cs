@@ -25,6 +25,7 @@ namespace Lab_2
         public int Count()
         {
             int count = 0;
+            if (head != null) count = 1;
             return count;
         }
     }
